@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             val paymentWay = randInt(0, 3)
             val saleValue = calculateSaleValue(fuelType, fuelQuantity)
             val clientCpf = getClientCpf()
+            updateTankQuantity(fuelType, fuelQuantity)
             registerSale(fuelType, fuelQuantity, paymentWay, saleValue, clientCpf)
         }
     }
@@ -37,6 +38,22 @@ class MainActivity : AppCompatActivity() {
         FuelType.GASOLINE.ordinal -> fuelQuantity * gasStation.gasoline.price
         FuelType.ALCOHOL.ordinal -> fuelQuantity * gasStation.alcohol.price
         else -> { throw Exception("Invalid Fuel Type") }
+    }
+
+    private fun updateTankQuantity(fuelType: Int, fuelQuantity: Int) {
+        when (fuelType) {
+            FuelType.GASOLINE.ordinal -> {
+                gasStation.gasoline.tankQuantity -= fuelQuantity
+                tvGasolineQtd.text = gasStation.gasoline.tankQuantity.toString()
+            }
+            FuelType.ALCOHOL.ordinal -> {
+                gasStation.alcohol.tankQuantity -= fuelQuantity
+                tvAlcoholQtd.text = gasStation.alcohol.tankQuantity.toString()
+            }
+            else -> {
+                throw Exception("Invalid Fuel Type")
+            }
+        }
     }
 
     private fun registerSale(fuelType: Int, fuelQuantity: Int, paymentWay: Int, saleValue: Double,
