@@ -1,11 +1,11 @@
-package com.gde.thinkshieldfuel
+package com.gde.gasstation
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.gde.thinkshieldfuel.model.GasStation
-import com.gde.thinkshieldfuel.model.Sale
+import com.gde.gasstation.model.GasStation
+import com.gde.gasstation.model.Sale
 import java.util.*
 
 

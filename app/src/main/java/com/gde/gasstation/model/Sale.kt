@@ -1,4 +1,4 @@
-package com.gde.thinkshieldfuel.model
+package com.gde.gasstation.model
 
 // Fuel Types -> 0 = Gasoline, 1 = Alcohol
 // Payment Ways -> 0 = Money, 1 = Credit, 2 = Debit

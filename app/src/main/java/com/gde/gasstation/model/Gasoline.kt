@@ -1,4 +1,4 @@
-package com.gde.thinkshieldfuel.model
+package com.gde.gasstation.model
 
 class Gasoline : Fuel() {
     override var price: Double = 5.39

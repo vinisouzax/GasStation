@@ -1,4 +1,4 @@
-package com.gde.thinkshieldfuel.model
+package com.gde.gasstation.model
 
 open class Fuel {
     open var price: Double = 0.0
