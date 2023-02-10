@@ -5,4 +5,5 @@ class GasStation {
     val name = "Gas Station"
     val gasoline = Gasoline()
     val alcohol = Alcohol()
+    val diesel = Diesel()
 }
